@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?><!--说明这是一个xml文件-->
+<!--指定文档类型，并引用mybatis地址-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--定义一个Maper节点，mybatis会根据这个节点生成一个java类-->
+<mapper namespace="com.crowdos.crowdos_community_backend.mapper.BmsTipMapper">
+    <select id="getRandomTip" resultType="com.crowdos.crowdos_community_backend.model.entity.BmsTip">
+        select *
+        from bms_tip
+        order by rand()
+            limit 1
+    </select>
+</mapper>
