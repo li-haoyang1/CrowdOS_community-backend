@@ -9,9 +9,19 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
+import javax.annotation.PostConstruct;
+
 @MapperScan("com.crowdos.crowdos_community_backend.mapper")
 @SpringBootApplication
 public class CrowdosCommunityBackendApplication extends SpringBootServletInitializer {
+
+    @PostConstruct
+    public void init() {
+        //解决netty启动冲突问题
+        //Netty4Utils.setAvailableProcessors()
+        System.setProperty("es.set.netty.runtime.available.processors", "false");
+    }
+
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return builder.sources(CrowdosCommunityBackendApplication.class);

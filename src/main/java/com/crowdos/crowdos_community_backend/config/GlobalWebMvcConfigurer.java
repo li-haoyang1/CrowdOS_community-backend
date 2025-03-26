@@ -16,7 +16,7 @@ public class GlobalWebMvcConfigurer implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://47.109.68.51:8085")
+                .allowedOrigins("http://47.109.68.51:8085/")
                 .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true)
                 .maxAge(3600)
@@ -26,7 +26,7 @@ public class GlobalWebMvcConfigurer implements WebMvcConfigurer {
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
         //允许所有域名进行跨域调用
-        config.addAllowedOrigin("http://47.109.68.51:8085");
+        config.addAllowedOrigin("http://47.109.68.51:8085/");
         //允许跨越发送cookie
         config.setAllowCredentials(true);
         //放行全部原始头信息

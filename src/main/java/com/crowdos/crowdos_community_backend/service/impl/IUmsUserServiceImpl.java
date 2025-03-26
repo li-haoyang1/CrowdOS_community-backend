@@ -95,4 +95,5 @@ public class IUmsUserServiceImpl extends ServiceImpl<UmsUserMapper,UmsUser> impl
 
         return profile;
     }
+
 }

@@ -50,4 +50,6 @@ public class BmsComment {
      */
     @TableField(value = "modify_time", fill = FieldFill.UPDATE)
     private Date modifyTime;
+
+
 }

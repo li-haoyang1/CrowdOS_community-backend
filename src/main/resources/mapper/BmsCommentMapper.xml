@@ -3,6 +3,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!--定义一个Maper节点，mybatis会根据这个节点生成一个java类-->
 <mapper namespace="com.crowdos.crowdos_community_backend.mapper.BmsCommentMapper">
+
     <resultMap id="commentVO" type="com.crowdos.crowdos_community_backend.model.vo.CommentVO">
         <id column="id" property="id"/>
         <result column="content" property="content"/>
